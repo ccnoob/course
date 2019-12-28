@@ -82,7 +82,7 @@ inurl:ftp filetype:xls
 inurl:Service.pwd
 ```
 
-- [google-hacking-database]: https://www.exploit-db.com/google-hacking-database
+- google-hacking-database:https://www.exploit-db.com/google-hacking-database 
 
 ## Recon-ng
 
