@@ -16,11 +16,8 @@
 ## shodan
 
 - 搜索互联网设备
-
 - Banner:http、ftp、ssh、telnet
-
-- [官网]: https://www.shodan.io
-
+- 官网:https://www.shodan.io
 - 常见filter:
 
   - net(192.168.20.1)
@@ -30,7 +27,6 @@
   - os
   - hostname
   - server
-  
 - 关于H.D.Moore
 
 ## Google
