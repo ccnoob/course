@@ -1,0 +1,45 @@
+# SMB扫描
+
+> Server Message Block协议
+
+- 微软历史上出现安全问题最多的协议
+- 实现复杂
+- 默认开放
+- 文件共享
+- 空会话未身份认证访问（SMB1）
+  - 密码策略
+  - 用户名
+  - 组名
+  - 机器名
+  - 用户、组SID
+
+| 版本   | 操作系统                         |
+| ------ | -------------------------------- |
+| SMB1   | Windows 2000/ XP / Windows 2003  |
+| SMB2   | Windows Vista SP1 / Windows 2008 |
+| SMB2.1 | Windows 7 / Windows 2008 R2      |
+| SMB3   | Windows 8 / Windows 2012         |
+
+## nmap
+
+```bash
+# 最粗糙的方法139 445
+nmap -v -p 139,445 192.168.60.1-20
+
+# nmap脚本扫描
+nmap 192.168.60.4 -p 139,445 --script=smb-os-discovery.nse
+nmap -v -p 139,445 --script=smb-vuln-*.nse --script-args=unsafe=0 11.11.11.103
+```
+
+## nbtscan
+
+```bash
+nbtscan -r 11.11.11.0/24
+```
+
+## enum4linux
+
+```bash
+enum4linux -a 192.168.60.10
+```
+
